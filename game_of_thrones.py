@@ -6,7 +6,7 @@ import sys
 import math
 
 def download_file(url):
-    local_filename = "/home/username/Desktop/got_s08_e01.mkv" % {path where you want to download} ex: /home/username/Desktop/
+    local_filename = "/home/username/Desktop/got_s08_e01.mkv" # {path where you want to download} ex: /home/username/Desktop/
     if os.path.exists(local_filename):
         return True
     
@@ -45,7 +45,7 @@ for url in urls :
         content = html.fromstring(response.content)
         links = content.xpath('//a/@href')
         for link in links:
-            print(link)
+            print(link)https://github.com/Niveshkrishna/Get-GOT
             if link[-4:] == ".mkv":
                 if validators.url(link):
                     if download_file(link):
